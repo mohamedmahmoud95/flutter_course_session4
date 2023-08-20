@@ -33,12 +33,14 @@ class _ContactListScreenState extends State<ContactListScreen> {
         ),
       ),
 
-
       floatingActionButton: FloatingActionButton(
         backgroundColor:  Color.fromARGB(255,10,232,232),
         child: Icon(Icons.add, color: Colors.black,),
-        onPressed: (){},
-
+        onPressed: (){
+          setState(() {
+            contacts.add(Contact(name: "New contact", phoneNumber: "unknown"));
+          });
+        },
       ),
     );
   }
